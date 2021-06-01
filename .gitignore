@@ -1,3 +1,9 @@
+*.txt
+!README.txt
+*.cvs
+*.png
+*.exe
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
