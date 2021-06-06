@@ -22,6 +22,7 @@ float Q_R1 = 0.2;
 float Q_R2;
 char* RNG_FILE = "big_test.txt";
 
+unsigned int m_step = 0;
 int number_of_request_in_devices = 0;
 int number_of_request_in_orbit = 0;
 unsigned int k_step;
@@ -157,6 +158,7 @@ float step(){
 	min_change(&index_of_worked_stream, &time_of_step);
 	switch (index_of_worked_stream) {
 		case I_FLOW:
+			m_step++;
 			wait_sampled_flow();
 			new_request_to_execute();
 			break;
